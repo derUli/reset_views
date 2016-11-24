@@ -1,0 +1,7 @@
+{
+   "id" : "reset_views",
+   "version" : "1.0",
+   "description" : "Reset Views",
+   "categories" : ["admin", "statistics", "views"],
+   "compatible_from" : "2017.1"
+}
