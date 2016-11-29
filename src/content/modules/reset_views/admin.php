@@ -4,7 +4,10 @@ define ( "MODULE_ADMIN_REQUIRED_PERMISSION", "reset_views" );
 function reset_views_admin() {
 	if (isset ( $_POST ["submit"] )) {
 		Database::query ( "update {prefix}content set `views` = 0", true );
-	}	
+		if (in_array ( "blog", getAllModules () )) {
+			Database::query ( "update {prefix}blog set `views` = 0", true );
+		}
+	}
 	?>
 <?php
 
@@ -14,8 +17,7 @@ function reset_views_admin() {
 <?php }?>
 
 <form id="cform" action="<?php echo getModuleAdminSelfPath()?>"
-	method="post"
-	data-question="<?php translate("ask_for_reset_views");?>"
+	method="post" data-question="<?php translate("ask_for_reset_views");?>"
 	onsubmit="return resetViewsSubmit();">
 <?php
 	
