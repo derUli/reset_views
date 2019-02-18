@@ -1,7 +1,7 @@
 {
    "id" : "reset_views",
-   "version" : "1.1",
+   "version" : "1.2",
    "description" : "Reset Views",
    "categories" : ["admin", "statistics", "views"],
-   "compatible_from" : "2017.1"
+   "compatible_from" : "2019.1.3"
 }

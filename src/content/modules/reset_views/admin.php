@@ -23,8 +23,7 @@ function reset_views_admin() {
 	
 	csrf_token_html ();
 	?>
-<input type="submit" name="submit"
-		value="<?php translate("reset_views");?>" />
+<button type="submit" name="submit" class="btn btn-danger"><i class="fa fa-sync" aria-hidden="true"></i> <?php translate("reset_views");?></button>
 </form>
 <script type="text/javascript"
 	src="<?php echo getModulePath("reset_views");?>js/admin.min.js"></script>
